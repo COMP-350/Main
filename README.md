@@ -1,4 +1,4 @@
 # Develop
 Mobile Game
-Bryce Curson
+Bryce
 
