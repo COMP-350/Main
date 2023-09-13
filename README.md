@@ -1,3 +1,3 @@
-# Main
+# Develop 
 Mobile Game
-Jonathan Ortiz 
+Jonathan 
