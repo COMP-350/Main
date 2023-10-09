@@ -22,8 +22,25 @@ public class Obstacle : MonoBehaviour, IRecycle
 
     }
 
+     void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "bug")
+        {
+            Debug.Log("collides");
+            Destroy(gameObject);
+
+        }
+        Destroy(gameObject);
+    }
     public void Shutdown()
     {
 
     }
+
+     void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+    }
+
+    
 }
