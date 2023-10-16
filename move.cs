@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class DynamicInputJump : MonoBehaviour
 {
     public float jumpForce = 20.0f; // Adjust the jump force as needed.
     public float maxJumpTime = 0.5f; // Maximum time the player can hold the jump button.
