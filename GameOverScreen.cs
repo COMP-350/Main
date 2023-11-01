@@ -8,11 +8,13 @@ public class GameOverScreen : MonoBehaviour
 {
     public void RestartButton()
     {
-        SceneManager.LoadScene(1);
+        //GameManager.score = 0;
+        SceneManager.LoadScene(4);
     }
 
     public void QuitButton()
     {
+        //GameManager.score = 0;
         SceneManager.LoadScene(0);
     }
 }
