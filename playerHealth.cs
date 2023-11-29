@@ -6,21 +6,27 @@ using UnityEngine;
 public class playerHealth : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static event Action playerDeath;
-    public float health, maxHealth;
+    AudioManager audioManager;
+    public Canvas GameOverUI;
+    static public int maxHealth;
+    public int health;
     void Start()
     {
         health = maxHealth;
     }
 
     // Update is called once per frame
-    public void playerHit()
+    public void playerHit(int damage)
     {
-        health -= maxHealth;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        health -= damage;
+        audioManager.PlaySFX(audioManager.hit);
         if(health <= 0) {
             health = 0;
-            Debug.Log("You died lol");
-            playerDeath?.Invoke();
+            gameObject.SetActive(false);
+            GameOverUI.enabled = true;
+            //audioManager.PlaySFX(audioManager.failure); 
         }
     }
+    
 }
